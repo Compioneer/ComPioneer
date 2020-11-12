@@ -12,7 +12,8 @@ if(!isset($_SESSION['username'])){
   </head>
   <body>
 
-
+<p>
+  testing </p>
 
       <a href="logout.php">Logout</a>
 
