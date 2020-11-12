@@ -13,7 +13,7 @@ if(!isset($_SESSION['username'])){
   <body>
 
 <p>
-  testing </p>
+  testing  </p>
 
       <a href="logout.php">Logout</a>
 
