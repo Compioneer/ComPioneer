@@ -3,7 +3,7 @@
 }
 .container{
 
-margin: 5%;
+margin: 1%;
 background-color: #FFFFFF;
 padding:  13rem 3rem 13rem 3rem;
 box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
@@ -58,6 +58,11 @@ background-clip: padding-box;
   background-color: #00A572;
   color:  #fff !important;
 }
+.btn-class:active{
+transfrom: scale(0.80);
+}
+
+
 
 .img-fluid{
 position: relative;
