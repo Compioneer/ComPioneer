@@ -3,9 +3,10 @@
 ?>
 
 <div class="header">
-  <a href="#default" class="logo">
+  <a href="home.php" class="logo">
     ComPioneer
   </a>
+</div>
 
   <div class="container">
         <div class="row">
@@ -26,7 +27,6 @@
                       <input type="password" name="password" class="form-control" required>
                     </div>
                     <button type="submit" name = "submit" class="btn btn-class"> Login </button>
-                    <button type="submit" name = "submit" class="btn btn-class"> Signup </button>
                   </form>
                 </div>
 
