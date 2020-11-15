@@ -64,7 +64,7 @@ transform: scale(0.80);
 
 .img-fluid{
 position: relative;
-top: 20px;
+top: 25px;
 right:5px;
 
 }
@@ -109,6 +109,35 @@ right:5px;
     float: none;
   }
 }
+
+#linkCreateAccount{
+  position: relative;
+    top: 29px;
+    left: 25px;
+    cursor: pointer;
+}
+#linkLogin{
+  position: relative;
+    top: 29px;
+    left: 45px;
+    cursor: pointer;
+
+}
+
+
+#confirmPass{
+  font-size: 15px;
+}
+.form_hidden{
+  display: none;
+}
+#signupBtn{
+  position: relative;
+left: 118px;
+
+}
+
+
 #btn-id{
 width: 60px;
 height: 60px;
