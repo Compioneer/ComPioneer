@@ -131,3 +131,35 @@ nav a{
 	font-size: 20px;
 	margin: 0 10px;
 }
+
+.card {
+margin:5% auto;
+float: center;
+margin-bottom: 10px;
+width: 90%;
+}
+
+.box-scroll{
+height:600px;
+width:740px;
+overflow:auto;
+background-color:#FFFFFF ;
+font-family:sans-serif;
+padding:0%;
+margin:5% 15%;
+}
+::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+::-webkit-scrollbar-thumb {
+background: #D8DBE2;
+border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+border: 1px solid #D8DBE2;
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #373f51;
+}
