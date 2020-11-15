@@ -50,8 +50,8 @@
                                     <th scope='row'>$row_num</th>
                                     <td>$tag_title</td>
                                     <td>
-                                        <form action='include\delete_tag.php' method='post' name='delete_post' value='$tag_id'><button class='btn btn-danger btn-small'>delete</button></form>
-                                        <form action='include\update_tag.php' method='post' name='update_post' value='$tag_id'><button class='btn btn-success btn-small'>update</button></form>
+                                        <form action='include\delete_tag.php' method='POST' name='delete_post' value='$tag_id'><button name='delete' class='btn btn-danger btn-small'>delete</button></form>
+                                        <form action='include\update_tag.php' method='post' name='update_post' value='$tag_id'><button name='edit' class='btn btn-success btn-small'>update</button></form>
                                     </td>
                                     </tr>";
                                     $row_num++;
