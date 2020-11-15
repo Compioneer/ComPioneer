@@ -9,7 +9,7 @@ require 'include\header.php';
   </head>
   <body>
 <div class="header">
-  <a href="#default" class="logo">
+  <a href="landing.php" class="logo">
      ComPioneer
     </a>
    <nav>
