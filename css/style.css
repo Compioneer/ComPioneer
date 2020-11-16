@@ -151,7 +151,7 @@ transform: translateY(-50%);
 z-index: 1;
 }
 nav{
-	float: right;
+	float: center;
 	line-height: 100px;
 }
 nav a{
