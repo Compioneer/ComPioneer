@@ -7,12 +7,6 @@ require 'include\header.php';
            <script src="js/CTAs.js"></script>
        <div class="header">
           <a href="landing.php" class="logo">ComPioneer</a>
-<<<<<<< HEAD
-           <nav>
-             <a href="FAQ.php">FAQ</a>
-            <a href="logout.php">Logout</a>
-          </nav>
-=======
 
               <div class="topnav" id="myTopnav">
                 <a href="FAQ.php">FAQ</a>
@@ -30,7 +24,6 @@ require 'include\header.php';
               </div>
 
 
->>>>>>> 7ede1b36e170eab016b0a46fd360ef64e5d05e1b
       </div>
 
          <!-- cards question section -->
