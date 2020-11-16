@@ -23,9 +23,9 @@
 
         if(isset($_POST['delete'])){
 
-            $tag_id= $_POST['tag_id'];
+            $tag_id= $_POST['delete'];
 
-            $sql="DELETE FROM tags WHERE tag_id ='$tag_id'";
+            $sql="DELETE FROM tags WHERE tag_id =$tag_id";
             $deleteTags_query= mysqli_query($con,$sql);
 
             if(!$deleteTags_query){
