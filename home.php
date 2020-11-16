@@ -9,7 +9,7 @@ require 'include\header.php';
           <a href="landing.php" class="logo">ComPioneer</a>
 
               <div class="topnav" id="myTopnav">
-                <a href="#contact">FAQ</a>
+                <a href="FAQ.php">FAQ</a>
                 <div class="dropdown">
                   <button class="dropbtn">
                     <i class="fa fa-user-circle-o" aria-hidden="true"></i>
@@ -23,10 +23,6 @@ require 'include\header.php';
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
               </div>
 
-           <nav>
-             <a href="FAQ.php">FAQ</a>
-            <a href="logout.php">Logout</a>
-          </nav>
 
       </div>
 
