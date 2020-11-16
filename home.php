@@ -1,13 +1,33 @@
+
 <?php
 require 'include\header.php';
  ?>
+ <!-- <li><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li> -->
            <!-- navgation  -->
+           <script src="js/CTAs.js"></script>
        <div class="header">
           <a href="landing.php" class="logo">ComPioneer</a>
+
+              <div class="topnav" id="myTopnav">
+                <a href="#contact">FAQ</a>
+                <div class="dropdown">
+                  <button class="dropbtn">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="profile.php">My Profile</a>
+                    <a href="logout.php">Logout</a>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+
            <nav>
              <a href="FAQ.php">FAQ</a>
             <a href="logout.php">Logout</a>
           </nav>
+
       </div>
 
          <!-- cards question section -->
