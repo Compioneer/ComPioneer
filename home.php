@@ -5,8 +5,7 @@ require 'include\header.php';
        <div class="header">
           <a href="landing.php" class="logo">ComPioneer</a>
            <nav>
-            <a href="IT.php">IT</a>
-            <a href="CS.php">CS</a>
+             <a href="FAQ.php">FAQ</a>
             <a href="logout.php">Logout</a>
           </nav>
       </div>
@@ -38,7 +37,7 @@ require 'include\header.php';
        </div>
     </section>
 
-  
+
 
         <a href="post_question.php">
         <button type="button" class="btn-class" id="btn-id">+</button>
