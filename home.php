@@ -23,10 +23,6 @@ require 'include\header.php';
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
               </div>
 
-           <nav>
-             <a href="FAQ.php">FAQ</a>
-            <a href="logout.php">Logout</a>
-          </nav>
 
       </div>
 
