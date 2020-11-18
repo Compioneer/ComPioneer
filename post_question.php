@@ -4,14 +4,9 @@
 
   <body>
     <div class="container">
-        <form action="" method="POST">
-
-           <div  class="form-group">
-             <label for="question_title">
-               <input class="form-control" type="text" placeholder="Question Title">
-           </div>
+        <form action="include\insert_question.php" method="POST">
            <div class="form-group">
-             <label for="exampleFormControlSelect2">Example multiple select</label>
+             <label for="exampleFormControlSelect2">Tags</label>
              <select multiple class="form-control" id="exampleFormControlSelect2">
                <?php
                        $sql="SELECT * FROM tags";
@@ -19,20 +14,23 @@
                        if(!$show_tags_query){
                            die("Erorr: ".mysqli_error($con));
                        }else{
-                           $row_num=1;
                            while($row=mysqli_fetch_assoc($show_tags_query)){
                                $tag_title= $row['tag_title'];
                                echo"<option>$tag_title</option>";
-                               $row_num++;
                            }
                        }
                ?>
              </select>
            </div>
            <div class="form-group">
-             <label for="exampleFormControlTextarea1">Example textarea</label>
-             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+             <label for="exampleFormControlTextarea1">Question</label>
+             <textarea name="question" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+             <br>
+              <div class="form-group">
+                <input type="file" name="pic_path" class="form-control-file" id="exampleFormControlFile1">
+              </div>
            </div>
+           <button  name="post" class ="btn btn-primary">send</button>
         </form>
     </div>
   </body>
