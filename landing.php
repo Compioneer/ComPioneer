@@ -11,7 +11,7 @@
    <div class="container">
       <div class="row">
             <div class="col-md-7 mb-3">
-                <img src="images/illu.svg" class="img-fluid" alt="illustration">
+                <img src="images/download-icons88.png" class="img-fluid" alt="illustration">
             </div>
 
                <div class="col-md-4">
