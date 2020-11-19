@@ -3,9 +3,11 @@
 ?>
 
   <body>
+    <div class="PObackgr">
     <div class="container">
         <form action="include\insert_question.php" method="POST">
            <div class="form-group">
+             <h2>Create Post </h2>
              <label for="exampleFormControlSelect2">Tags</label>
              <select multiple class="form-control" id="exampleFormControlSelect2">
                <?php
@@ -30,8 +32,9 @@
                 <input type="file" name="pic_path" class="form-control-file" id="exampleFormControlFile1">
               </div>
            </div>
-           <button  name="post" class ="btn btn-primary">send</button>
+           <button  name="post" class ="btn btn-primary" id="PObtn">send</button>
         </form>
     </div>
+      </div>
   </body>
 </html>
