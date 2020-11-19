@@ -4,8 +4,9 @@ require 'include\header.php';
  ?>
  <!-- <li><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li> -->
            <!-- navgation  -->
+           <div class="home">
            <script src="js/CTAs.js"></script>
-       <div class="header">
+       <div class="headerin">
           <a href="landing.php" class="logo">ComPioneer</a>
 
               <div class="topnav" id="myTopnav">
@@ -29,7 +30,7 @@ require 'include\header.php';
          <!-- cards question section -->
       <section class= "box-scroll">
         <div class="container-home">
-        <div class="card text-white bg-info mb-3">
+        <div class="card bg-light mb-3" id="coloring">
           <div class="card-header">username</div>
           <div class="card-body">
             <h5 class="card-title">Question Title </h5>
@@ -43,7 +44,7 @@ require 'include\header.php';
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
         </div>
-        <div class="card text-white bg-dark mb-3">
+        <div class="card bg-light mb-3">
           <div class="card-header">username</div>
           <div class="card-body">
             <h5 class="card-title">Question Title </h5>
@@ -58,6 +59,6 @@ require 'include\header.php';
         <a href="post_question.php">
         <button type="button" class="btn-class" id="btn-id">+</button>
         </a>
-
+</di>
   </body>
 </html>
