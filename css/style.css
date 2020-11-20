@@ -23,7 +23,7 @@ width: 100%;
 font-size: 1rem;
 font-weight: 400;
 line-height: 1.5;
-border-color: #2c3e50 !important;
+border-color: #377094 !important;
 border-style: solid !important;
 border-width: 0 0 1.7px 0 !important;
 padding: 0px !important;
@@ -47,17 +47,17 @@ background-clip: padding-box;
   position: relative;
   left:135px;
   top: 29px;
-  border-color: #2c3e50 !important;
+  border-color: #377094 !important;
   border-style: solid !important;
   border-width:medium   !important;
   border-radius: 0;
-  background-color: #2c3e50 !important;
+  background-color: #377094 !important;
 
 }
 .btn-class:hover{
 
   background-color: #f4f3ee !important;
-  color:  #2c3e50 !important;
+  color:  #377094 !important;
 }
 .btn-class:active {
 transform: scale(0.80);
@@ -217,16 +217,20 @@ transform: translateY(-50%);
 z-index: 1;
 }
 
-
 .card {
-margin:5% auto;
+margin: 2% auto;
 float: center;
+padding: .5rem .5rem .5rem .5rem;
+box-shadow: 0 0 5px 5px rgba(0, 0, 0, .05);
 margin-bottom: 10px;
-width: 90%;
-background-color: #bcb8b1!important;
+width: 60%;
+background-color: #FFFFFF!important;
 }
 .card-header{
-  background-color: #f7f9f9 !important ;
+  background-color: #FFFFFF !important ;
+}
+#coloring{
+  background-color: #FFFFFF !important;
 }
 /*.box-scroll{
 height:600px;
@@ -252,11 +256,11 @@ border-radius: 10px;
 ::-webkit-scrollbar-thumb:hover {
 background: #373f51;
 }
-/*header inside*/
+/*header inside
 .headerin {
   overflow: hidden;
   padding: 20px 10px;
-  background-color: #2c3e50;
+  background-color: #FFFFFF;
 }
 .headerin a {
   float: left;
@@ -284,7 +288,7 @@ background: #373f51;
 }
 .headerin-right {
   float: right;
-}
+}*/
 .home{
-  background-color: #f4f3ee;
+  background-color: #FFFFFF;
 }
