@@ -1,26 +1,43 @@
 <?php
-include("../db.php");
-if (isset($_POST['post']))	{
+    include("../db.php");
 
-   session_start();
-    if(isset($_SESSION['username'])){
+    session_start();
 
-      $question=$_POST['question'];
-      $pic_path=$_POST['pic_path'];
+    if(!isset($_POST['submit'])){
 
-      $sql=" INSERT INTO questions (question,pic_path) VALUES ('$question','$pic_path')";
-      $insert_q_query=mysqli_query($con,$sql);
-       if(!$insert_q_query){
-          die("Error: ". mysqli_error($con));
-       } else {
-          header("Location:../post_question.php?insert_q_status=success");
-       }
-}else{
-   header("Location:../post_question.php?insert_q_status=failed");
-}
-} else {
-  header("location:landing.php");
-  exit();
+        header("Location: ../landing.php");
+    }else{
+        if(!isset($_SESSION['username'])){
+            header("Location: ../landing.php");
+        }else{
+            $question_title=$_POST['question_title'];
+            $question_body = $_POST['question_body'];
+            $username = $_SESSION['username'];
+
+            $sql="INSERT INTO questions (q_title, q_body, username) VALUES ('$question_title','$question_body','$username')";
+            $posting_question_query = mysqli_query($con, $sql);
+
+            if(!$posting_question_query){
+                die("Error: ". mysqli_error($con));
+            }else{
+                if(!isset($_POST['tags'])){
+                    header("Location: ../home.php");
+                }else{
+                    $q_id = mysqli_insert_id($con);
+
+                    for($i=0; $i<count($_POST['tags']); $i++){
+                        $tag_id = $_POST['tags'][$i];
+                        $sql="INSERT INTO q_tags (q_id, tag_id) VALUES ($q_id, $tag_id)";
+                        $insert_tags_query= mysqli_query($con, $sql);
+
+                        if(!$insert_tags_query){
+                            die("Error: ". mysqli_error($con));
+                        }else{
+                            header("Location: ../home.php");
+                        }
+                    }
+                }
+            }
+        }
     }
-
 ?>
