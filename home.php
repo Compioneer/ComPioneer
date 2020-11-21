@@ -6,7 +6,7 @@ require 'include\header.php';
            <!-- navgation  -->
            <div class="home">
            <script src="js/CTAs.js"></script>
-       <div class="header">
+       <div class="headerin">
           <a href="landing.php" class="logo">ComPioneer</a>
 
               <div class="topnav" id="myTopnav">

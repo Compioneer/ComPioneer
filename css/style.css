@@ -227,10 +227,10 @@ width: 60%;
 background-color: #FFFFFF!important;
 }
 .card-header{
-  background-color: #FFFFFF !important ;
+  background-color: #fdfffc !important ;
 }
 #coloring{
-  background-color: #FFFFFF !important;
+  background-color: #fdfffc !important;
 }
 /*.box-scroll{
 height:600px;
@@ -256,15 +256,15 @@ border-radius: 10px;
 ::-webkit-scrollbar-thumb:hover {
 background: #373f51;
 }
-/*header inside
+/*header inside*/
 .headerin {
   overflow: hidden;
   padding: 20px 10px;
-  background-color: #FFFFFF;
+  background-color: #377094;
 }
 .headerin a {
   float: left;
-  color: #d9dcd6;
+  color: #f4f3ee;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -279,7 +279,7 @@ background: #373f51;
 }
 .headerin a:hover {
     text-decoration: none !important;
-  background-color: #2c3e50;
+  background-color: #377094;
   color: black;
 }
 .headerin a.active {
@@ -288,9 +288,9 @@ background: #373f51;
 }
 .headerin-right {
   float: right;
-}*/
+}
 .home{
-  background-color: #FFFFFF;
+  background-color: #fdfffc;
 }
 .form-group h2 {
    text-align: center;
