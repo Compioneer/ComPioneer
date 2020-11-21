@@ -9,6 +9,7 @@
 ?>
 
   <body>
+    <div class="PObackgr">
     <div class="container">
         <form action="include/insert_question.php" method="POST">
 
@@ -17,7 +18,8 @@
                <input class="form-control" name="question_title" type="text" placeholder="Question Title">
            </div>
            <div class="form-group">
-             <label for="exampleFormControlSelect2">Example multiple select</label>
+             <h2>Create Post</h2>
+             <label for="exampleFormControlSelect2">Tags</label>
              <select name="tags[]" multiple class="form-control" id="exampleFormControlSelect2">
                <?php
                   $sql= "SELECT * FROM tags";
@@ -47,9 +49,9 @@
            <div class="form-group">
               <button type="submit" name="submit" value="submit">Post question</button>
            </div>
+           <button  name="submit" value="submit" class ="btn btn-primary" id="PObtn">send</button>
         </form>
     </div>
-
-    <?php }; ?>
+  </div>
   </body>
 </html>
