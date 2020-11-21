@@ -12,7 +12,6 @@
     <div class="PObackgr">
     <div class="container">
         <form action="include/insert_question.php" method="POST">
-
            <div  class="form-group">
              <label for="question_title">
                <input class="form-control" name="question_title" type="text" placeholder="Question Title">
@@ -45,10 +44,6 @@
              <textarea class="form-control" name="question_body" id="exampleFormControlTextarea1" rows="3"></textarea>
            </div>
            <input type="hidden" name="username" value="<?php $username;?>">
-
-           <div class="form-group">
-              <button type="submit" name="submit" value="submit">Post question</button>
-           </div>
            <button  name="submit" value="submit" class ="btn btn-primary" id="PObtn">send</button>
         </form>
     </div>
