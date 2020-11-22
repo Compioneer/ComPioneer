@@ -314,3 +314,16 @@ background: #373f51;
 #PObtn:hover{
   background: #2980b9 ;
 }
+.footerContent{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #d5d9e8;
+  text-align: left;
+  padding: 29px 10px;
+  overflow: hidden;
+}
+.footerContent p{
+  width: 200px;
+}

@@ -59,6 +59,10 @@ require 'include\header.php';
         <a href="post_question.php">
         <button type="button" class="btn-class" id="btn-id">+</button>
         </a>
+
+  <div class="footerContent">
+<h4> About us </h4>
+<p> comioneer is __________ </p>
 </di>
   </body>
 </html>
