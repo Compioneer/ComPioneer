@@ -37,11 +37,11 @@ require 'include\header.php';
                <h5 class="card-title"> <p><?php
                 echo $q_row['q_title'];
                 ?></p></h5>
-               <p class="card-text"><a href="answers.php?q_id=<?php echo $q_id; ?>"><?php echo $q_row['q_body']; ?></a></p>
+               <p class="card-text"><a href="post_answer.php?q_id=<?php echo $q_id; ?>"><?php echo $q_row['q_body']; ?></a></p>
               <div class="timestamp">
                 <?php echo $q_timestamp;?>
               </div>
-              <a class="answer-link" href="answers.php?q_id=<?php echo $q_id; ?>"><i class="fas fa-comment"></i></a>
+              <a class="answer-link" href="post_answer.php?q_id=<?php echo $q_id; ?>"><i class="fas fa-comment"></i></a>
 
              <!-- if(!($q_username===$_SESSION['username'])){
                   echo "";
