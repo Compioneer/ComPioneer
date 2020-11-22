@@ -84,37 +84,33 @@ require 'include\header.php';
        }
      ?>
 
-      <a href="post_question.php">
-      <button type="button" class="btn-class" id="btn-id">+</button>
-      </a>
-      <!-- </div> -->
-      <?php
-      //pagination
-      $results_per_page = 10;
-      $sql = "SELECT * FROM questions";
-      $result = mysqli_query($con,$sql);
-      $number_of_results = mysqli_num_rows($result);
-      //while ($row = mysqli_fetch_array($result)) {
-      //echo $row['id']. ' '. $row['questions']. '<br>';
-      //}
-      if (!isset($_GET['page'])){
-        $page = 1;
-      }else {
-        $page = $_GET['page'];
-      }
-      $this_page_first_result = ($page-1)*$results_per_page;
+     <?php
+     //pagination
+     $q_id= $q_row['q_id'];
+     $results_per_page = 5;
+     $sql = "SELECT * FROM questions";
+     $result = mysqli_query($con,$sql);
+     $number_of_results = mysqli_num_rows($result);
+     //while ($row = mysqli_fetch_array($result)) {
+       //echo $row['q_id'] . ' ' . '<br>';
+     //}
+     if (!isset($_GET['page'])){
+       $page = 1;
+     }else {
+       $page = $_GET['page'];
+     }
+     $this_page_first_result = ($page-1)*$results_per_page;
 
-      $sql = "SELECT * FROM questions LIMIT " . $this_page_first_result . ',' . $results_per_page;
-      $result = mysqli_query($con, $sql);
+     $sql = "SELECT * FROM questions LIMIT " . $this_page_first_result . ',' . $results_per_page;
+     $result = mysqli_query($con, $sql);
 
-      while ($row = mysqli_fetch_array($result)) {
-        echo $row['id'] . ' ' . $row['questions'] . '<br>';
-      }
-      $number_of_pages = ceil($number_of_results/$results_per_page);
-      for ($page=1; $page<=$number_of_pages ; $page++) {
-        echo '<a herf="home.php?page=' . $page . '">' . $page . '</a> ';
-      }
-      ?>
+     while ($row = mysqli_fetch_array($result)) {
+       echo $row['q_id'] . ' ' . '<br>';}
+     $number_of_pages = ceil($number_of_results/$results_per_page);
+     for ($page=1; $page<=$number_of_pages ; $page++) {
+       echo '<a href="home.php?page=' . $page . '">' . $page . '</a> ';
+     }
+     ?>
 
 
 
