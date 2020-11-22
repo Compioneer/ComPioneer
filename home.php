@@ -41,7 +41,7 @@ require 'include\header.php';
               <div class="timestamp">
                 <?php echo $q_timestamp;?>
               </div>
-              <a class="answer-link" href="answer.php"><i class="fas fa-comment"></i></a>
+              <a class="answer-link" href="answers.php?q_id=<?php echo $q_id; ?>"><i class="fas fa-comment"></i></a>
 
              <!-- if(!($q_username===$_SESSION['username'])){
                   echo "";
