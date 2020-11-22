@@ -100,44 +100,8 @@ right:5px;
 .header-right {
   float: right;
 }
-/* nav style */
-.topnav .icon {
-  display: none;
-}
-.topnav{
-  float : right;
-}
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: black ;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
+.header .iconNav{
+  float: right;
 }
 
 @media screen and (max-width: 500px) {
@@ -149,31 +113,6 @@ right:5px;
   .header-right {
     float: none;
   }
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav.responsive {position: relative;}
-.topnav.responsive a.icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.topnav.responsive a {
-  float: none;
-  display: block;
-  text-align: left;
-}
-.topnav.responsive .dropdown {float: none;}
-.topnav.responsive .dropdown-content {position: relative;}
-.topnav.responsive .dropdown .dropbtn {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
 }
 
 #linkCreateAccount{
@@ -232,30 +171,21 @@ background-color: #FFFFFF!important;
 #coloring{
   background-color: #fdfffc !important;
 }
-/*.box-scroll{
-height:600px;
-width:740px;
-overflow:auto;
-background-color:#FFFFFF ;
-font-family:sans-serif;
-padding:0%;
-margin:5% 15%;
-}*/
+
+
+/* scroll bar style */
 ::-webkit-scrollbar {
 width: 8px;
 height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-background: #D8DBE2;
-border-radius: 10px;
+background: #377094;
 }
 ::-webkit-scrollbar-track {
-border: 1px solid #D8DBE2;
+border: 1px solid #377094;
 border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
-background: #373f51;
-}
+
 /*header inside*/
 .headerin {
   overflow: hidden;
@@ -313,4 +243,18 @@ background: #373f51;
 }
 #PObtn:hover{
   background: #2980b9 ;
+}
+
+/* tags color */
+.badge-pill {
+  background-color:#fec0b8 !important;
+}
+/* timestamp style  */
+.timestamp{
+  text-align: right;
+  font-size: 10px ;
+}
+/* answer link style */
+.card-body a  {
+  color:#377094;
 }
