@@ -2,7 +2,7 @@
     include("../db.php");
 
     session_start();
-
+    $timestamp=date('Y-m-d H:i');
     if(!isset($_POST['submit'])){
 
         header("Location: ../landing.php");
@@ -14,7 +14,7 @@
             $question_body = $_POST['question_body'];
             $username = $_SESSION['username'];
 
-            $sql="INSERT INTO questions (q_title, q_body, username) VALUES ('$question_title','$question_body','$username')";
+            $sql="INSERT INTO questions (q_title, q_body, username,timestamp) VALUES ('$question_title','$question_body','$username',now())";
             $posting_question_query = mysqli_query($con, $sql);
 
             if(!$posting_question_query){
