@@ -28,14 +28,33 @@
         <a class = "iconNav" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </nav>
     </div>
+<?php
+    if(!isset($_SESSION['username'])){
+      header("Location: home.php");
+    }else{
+      $username= $_SESSION['username'];
 
-<!-- <
-?php
-$sql="SELECT * FROM questions WHERE username = '$username'";
-$user_info_query=mysqli_query($con,$sql);
-echo $user_info_query;
- ?> -->
+      $sql="SELECT * FROM questions WHERE username='$username'";
+
+      $user_questions_query=mysqli_query($con, $sql);
+
+      if(!$user_questions_query){
+        die("Error: ".mysqli_error($con));
+      }else{
+        while($row=mysqli_fetch_assoc($user_questions_query)){
+
+?>
+<div class="container-home">
+<div class="card bg-light mb-3" id="coloring">
+  <div class="card-header">  <?php
+    echo $row['username'];
+    ?></div>
+  <div class="card-body">
+    <p class="card-text"><?php echo $row['q_body']; ?></p>
 
 
-
-<?php } ?>
+<?php
+      }
+    }
+  }
+ } ?>
