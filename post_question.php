@@ -7,7 +7,8 @@
       $username = $_SESSION['username'];
 
 ?>
-
+<!-- CKEDITOR  -->
+<script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
   <body>
     <div class="PObackgr">
     <div class="container">
@@ -42,6 +43,9 @@
            <div class="form-group">
              <label for="exampleFormControlTextarea1">Example textarea</label>
              <textarea class="form-control" name="question_body" id="exampleFormControlTextarea1" rows="3"></textarea>
+             <script>
+                        CKEDITOR.replace( 'question_body' );
+                </script>
            </div>
            <input type="hidden" name="username" value="<?php $username;?>">
            <button  name="submit" value="submit" class ="btn btn-primary" id="PObtn">send</button>
