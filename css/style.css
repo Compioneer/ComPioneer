@@ -258,3 +258,16 @@ border-radius: 10px;
 .card-body a  {
   color:#377094;
 }
+.footerContent{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #d5d9e8;
+  text-align: left;
+  padding: 29px 10px;
+  overflow: hidden;
+}
+.footerContent p{
+  width: 200px;
+}
