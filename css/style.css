@@ -271,3 +271,31 @@ border-radius: 10px;
 .footerContent p{
   width: 200px;
 }
+.form-tags{
+  text-align: center;
+  margin-bottom:10%;
+}
+
+.btn-tags{
+  font-family: 'Poppins', sans-serif ;
+  color: #f4f3ee !important;
+  position: relative;
+  text-align: center;
+  border-color: #377094 !important;
+  border-style: solid !important;
+  border-width:medium   !important;
+  border-radius: 0;
+  background-color: #377094 !important;
+
+}
+.btn-tags:hover{
+
+  background-color: #f4f3ee !important;
+  color:  #377094 !important;
+}
+.btn-tags:active {
+transform: scale(0.80);
+}
+#btn-delete{
+  color:red;
+}
