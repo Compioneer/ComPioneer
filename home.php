@@ -18,7 +18,26 @@ require 'include\header.php';
     <!-- cards question section -->
            <?php
            session_start();
-       $sql= "SELECT * FROM questions";
+
+           //pagination
+           $results_per_page = 5;
+           $sql = "SELECT * FROM questions";
+           $result = mysqli_query($con,$sql);
+           $number_of_results = mysqli_num_rows($result);
+
+           if (!isset($_GET['page'])){
+             $page = 1;
+           }else {
+             $page = $_GET['page'];
+           }
+
+           if($page >= 1){
+             $this_page_first_result = ($page-1) * $results_per_page;
+           }else{
+             $this_page_first_result = 0;
+           }
+
+       $sql= "SELECT * FROM questions LIMIT $this_page_first_result,$results_per_page";
        $questions_query=mysqli_query($con, $sql);
        if(!$questions_query){
          die("Error: ".mysqli_error($con));
@@ -90,7 +109,7 @@ require 'include\header.php';
       <!-- </div> -->
       <?php
       //pagination
-      $results_per_page = 10;
+      // $results_per_page = 10;
       $sql = "SELECT * FROM questions";
       $result = mysqli_query($con,$sql);
       $number_of_results = mysqli_num_rows($result);
@@ -102,19 +121,39 @@ require 'include\header.php';
       }else {
         $page = $_GET['page'];
       }
-      $this_page_first_result = ($page-1)*$results_per_page;
 
-      $sql = "SELECT * FROM questions LIMIT " . $this_page_first_result . ',' . $results_per_page;
+      if($page > 1){
+        $this_page_first_result = $page * $results_per_page;
+      }else{
+        $this_page_first_result = $page;
+      }
+
+      $next_page = $page + 1;
+      $sql = "SELECT * FROM questions LIMIT  $this_page_first_result, $results_per_page";
       $result = mysqli_query($con, $sql);
 
-      while ($row = mysqli_fetch_array($result)) {
-        echo $row['id'] . ' ' . $row['questions'] . '<br>';
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo  $row['question'] . '<br>';
       }
-      $number_of_pages = ceil($number_of_results/$results_per_page);
-      for ($page=1; $page<=$number_of_pages ; $page++) {
-        echo '<a herf="home.php?page=' . $page . '">' . $page . '</a> ';
-      }
-      ?>
+
+
+        // echo "<a href='home.php?page=$page'>  $page   </a> ";
+
+        ?>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="home.php?page=<?php if($page<2){echo 1;}else{echo $page--;}?>">Previous</a></li>
+            <?php
+              $number_of_pages = ceil($number_of_results/$results_per_page);
+              for ($page=1; $page<=$number_of_pages ; $page++) {
+            ?>
+                <li class="page-item"> <a class="page-link" href='home.php?page=<?php echo $page;?>'>  <?php echo $page; ?>  </a></li>
+            <?php  } ?>
+            <li class="page-item"><a class="page-link" href="home.php?page=<?php if($next_page>$number_of_pages){echo $next_page-1;}else{echo $next_page;}?>">Next</a></li>
+          </ul>
+        </nav>
+
+
 
 
 
