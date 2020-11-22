@@ -3,28 +3,36 @@
     require 'include\header.php';
 
 ?>
+    <!-- font awesome js link -->
+    <script src="https://use.fontawesome.com/5d66a18552.js"></script>
+    <div class="header">
+      <nav>
+      <a href="home.php" class="logo">ComPioneer</a>
+      <a class = "iconNav" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      </nav>
+    </div>
 
-    <section id="add_tags">
-        <div class="contaire">
-            <div class="col-xs-6 col-xs-offset-3">
-                <div class="form-wrap">
 
-                   <h1>Add Tags</h1>
-                    <form role="form" action="include\addTag.php" method="post" id="login-form" autocomplete="off">
-                        <div class="form-group">
-                            <label for="tag_title">
-                            <input type="text" name="tag_title" id="tag_title" class="form-control" placeholder="tap title" required>
-                        </div>
-                        <button name="submit" class="btn btn-primary">Add Tag </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="show_tags">
-
         <div class="container">
+          <section id="add_tags">
+              <div class="contaire">
+                  <div class="col-xs-6 col-xs-offset-3">
+                      <div class="form-wrap">
+
+                         <h1>Add Tags</h1>
+                          <form role="form" action="include\addTag.php" method="post" id="login-form" autocomplete="off">
+                              <div class="form-group">
+                                  <label for="tag_title">
+                                  <input type="text" name="tag_title" id="tag_title" class="form-control" placeholder="tap title" required>
+                              </div>
+                              <button name="submit" class="btn btn-primary">Add Tag </button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </section>
             <div class="col-xs-6 col-xs-offset-3">
                 <table class="table table-striped">
                 <thead>
@@ -60,12 +68,9 @@
                         ?>
                 </tbody>
                 </table>
-
             </div>
         </div>
-
     </section>
-
 
 </body>
 </html>
