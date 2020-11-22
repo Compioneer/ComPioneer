@@ -32,7 +32,7 @@
                   </div>
               </div>
           </section>
-          
+
             <div class="col-xs-6 col-xs-offset-3">
                 <table class="table table-striped">
                 <thead>
@@ -60,7 +60,7 @@
                                     <td>
                                         <form action='include\delete_tag.php' method='POST'><button name='delete' value='$tag_id' class='btn btn-danger btn-small'>delete</button></form>
                                         <br>
-                                        <form action='include\update_tag.php' method='post'><button name='edit' class='btn btn-success btn-small'>update</button></form>
+                                        <form action='update_tag.php' method='post'><button name='edit' value='$tag_id' class='btn btn-success btn-small'>update</button></form>
                                     </td>
                                     </tr>";
                                     $row_num++;
