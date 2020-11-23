@@ -1,5 +1,4 @@
 <?php
-
     include "include/header.php";
 
 
@@ -8,27 +7,59 @@
 
     }else{
         $q_id = $_GET['q_id'];
-
-
     }
-
 ?>
 
-    <div class="container">
-        <div class="col align-self-center">
-            <?php
-                $sql="SELECT * FROM questions WHERE q_id = $q_id";
-                $q_query = mysqli_query($con, $sql);
-                if(!$q_query){
-                    die("Error: ".mysqli_error($con));
-                }else{
-                    while($q_row=mysqli_fetch_assoc($q_query)){
-                        $q_title= $q_row['q_title'];
-                        $q_body= $q_row['q_body'];
-                        $q_username= $q_row['username'];
+<!-- font awesome js link -->
+<script src="https://use.fontawesome.com/5d66a18552.js"></script>
+<div class="header">
+<nav>
+<a href="home.php" class="logo">ComPioneer</a>
+<a class= "iconNav" href="profile.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+</nav>
+</div>
 
-                        echo "Qusestion Title: $q_title"."<br>";
+
+    <div class="col align-self-center">
+
+
+  <!-- show the selected question -->
+      <?php
+      session_start();
+         $sql="SELECT * FROM questions WHERE q_id = $q_id";
+         $q_query = mysqli_query($con, $sql);
+            if(!$q_query){
+                die("Error: ".mysqli_error($con));
+            }else{
+              while($q_row=mysqli_fetch_assoc($q_query)){
+                    $q_title= $q_row['q_title'];
+                    $q_body= $q_row['q_body'];
+                    $q_username= $q_row['username'];
+                    $q_timestamp=$q_row['timestamp'];
+                      ?>
+
+                        <!-- echo   $q_username ."<br>";
+                        echo  $q_title."<br>";
                         echo $q_body."<br>";
+                        echo $q_timestamp."<br>"; -->
+
+                        <div class="container-home">
+                        <div class="card bg-light mb-3" id="Acoloring">
+                          <div class="card-header">  <?php
+                            echo $q_username;
+                            ?></div>
+                          <div class="card-body">
+                            <h5 class="card-title"> <p><?php
+                             echo $q_title;
+                             ?></p></h5>
+                            <p class="card-text"><?php echo $q_row['q_body']; ?></p>
+                           <div class="timestamp">
+                             <?php echo $q_timestamp;?>
+                           </div>
+
+
+
+                      <?php
                         $sql_tags= "SELECT * FROM q_tags WHERE q_id= $q_id";
                         $tag_id_query = mysqli_query($con, $sql_tags);
                         if(!$tag_id_query){
@@ -44,7 +75,7 @@
                                 }else{
                                         while($tag_title_row=mysqli_fetch_assoc($tag_title_query)){
                                         $tag_title= $tag_title_row['tag_title'];
-                                        ?> <?php echo $tag_title." -- "; ?> <?php
+                                        ?> <span class= "badge badge-pill badge-primary"><?php echo $tag_title; ?></span> <?php
                                     }
 
                                 }
@@ -54,13 +85,14 @@
                 }
             ?>
         </div>
+      </div>
     </div>
-    <hr>
+
+
 
     <!-- answers part -->
-    <h1>Answers</h1>
-    <div class="container">
-        <div class="col align-self-center">
+
+
                 <?php
                     $sql= "SELECT * FROM answers WHERE q_id= $q_id";
                     $a_query=mysqli_query($con, $sql);
@@ -73,23 +105,33 @@
                             $a_body = $a_row['answer'];
                             $a_username = $a_row['username'];
                             $a_timestamp = $a_row['timestamp'];
+                             ?>
+                            <div class="container-home">
+                            <div class="card bg-light mb-3" id="coloring">
 
-                            echo $a_username."<br>".$a_timestamp."<br>".$a_body;
-                            if(!($a_username===$_SESSION['username'])){
-                                echo "";
-                            }else{
-                                echo "<br><br><a class='btn btn-info' href='editAnswer.php?a_id=$a_id&&q_id=$q_id'>EDIT</a>";
-                            }
-                            echo "<br><hr>";
+                              <div class="card-header"> <?php
+                                     echo $a_username;
+                               ?></div>
+
+                               <div class="card-body">
+                               <p class="card-text"> <?php echo $a_body; ?></p>
+                               <div class="timestamp">   <?php echo $a_timestamp;?> </div>
+
+                             </div>
+                             </div>
+                        <?php
+
+
                         }
                     }
                 ?>
-        </div>
+
     </div>
+
     <hr>
 
     <!-- Answer Form: this form will not show up unless the user is a registed user -->
-    <div class="container">
+
         <div class="col align-self-center">
         <?php
             if(!isset($_SESSION['username'])){
@@ -107,6 +149,7 @@
                 </div>
             </form>
         </div>
-    </div>
+
             <?php } ?>
 </body>
+</html>
