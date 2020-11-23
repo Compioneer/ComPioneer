@@ -12,6 +12,9 @@
 
 <!-- font awesome js link -->
 <script src="https://use.fontawesome.com/5d66a18552.js"></script>
+<!-- ckeditor for textbox -->
+<script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+
 <div class="header">
 <nav>
 <a href="home.php" class="logo">ComPioneer</a>
@@ -19,6 +22,7 @@
 </nav>
 </div>
 
+ <div class="container" id="zcontainer">
 
     <div class="col align-self-center">
 
@@ -92,6 +96,9 @@
 
     <!-- answers part -->
 
+<hr class="lineT" width="58%">
+
+
 
                 <?php
                     $sql= "SELECT * FROM answers WHERE q_id= $q_id";
@@ -119,6 +126,7 @@
 
                              </div>
                              </div>
+                           </div>
                         <?php
 
 
@@ -126,30 +134,37 @@
                     }
                 ?>
 
-    </div>
+
 
     <hr>
 
     <!-- Answer Form: this form will not show up unless the user is a registed user -->
 
-        <div class="col align-self-center">
+
         <?php
             if(!isset($_SESSION['username'])){
-                echo "<h3>To add an answer you have to be <a href='landing.php'>logged in</a></h3>";
+                echo "<h3>To post an answer you have to be <a href='landing.php'>Logged in</a></h3>";
             }else{
         ?>
             <form action="include/insertAnswer.php" method="post">
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Write your answer here:</label>
-                    <textarea name="answer" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                    <textarea name="answer" class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="write your answer here"></textarea>
                     <input type="hidden" name="q_id" value="<?php echo $q_id; ?>">
+                    <script>
+                               CKEDITOR.replace( 'answer' );
+                       </script>
                 </div>
                 <div class="form-group">
-                    <button name="submit" value="submit">Post an Answer</button>
+                    <button name="submit" value="submit" class="btn btn-class" id="ansbtn" >Post</button>
                 </div>
             </form>
-        </div>
+
 
             <?php } ?>
+
+
+  </div>
+</div>
 </body>
 </html>
