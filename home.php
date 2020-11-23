@@ -143,7 +143,7 @@ require 'include\header.php';
         ?>
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="home.php?page=<?php if($page<2){echo 1;}else{echo $page--;}?>">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="home.php?page=<?php if($page<=2){echo 1;}else{echo $page--;}?>">Previous</a></li>
             <?php
               $number_of_pages = ceil($number_of_results/$results_per_page);
               for ($page=1; $page<=$number_of_pages ; $page++) {
