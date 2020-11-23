@@ -55,7 +55,7 @@
           <div class="container-home">
           <div class="card bg-light mb-3" id="coloring">
             <div class="card-header">  <?php
-              echo "You";
+              echo "You" ;
               ?></div>
             <div class="card-body">
               <h5 class="card-title"> <p><?php
