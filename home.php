@@ -3,11 +3,16 @@ require 'include\header.php';
  ?>
 
           <!-- font awesome js link -->
-      <script src="https://use.fontawesome.com/5d66a18552.js"></script>
+      <!-- <script src="https://use.fontawesome.com/5d66a18552.js"></script> -->
     <div class="header">
         <nav>
         <a href="home.php" class="logo">ComPioneer</a>
-        <a class= "iconNav" href="profile.php"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+        <div class="img-profile">
+          <a class= "iconNav" href="profile.php">
+            <img src="images\icons8-test-account-100.png" alt="profile">
+          </a>
+        </div>
+
         </nav>
     </div>
 
@@ -49,9 +54,13 @@ require 'include\header.php';
            ?>
            <div class="container-home">
            <div class="card bg-light mb-3" id="coloring">
-             <div class="card-header">  <?php
-               echo $q_username;
-               ?></div>
+             <div class="card-header">
+               <div class="img-qu">
+                    <img src="images\icons8-test-account-100.png" alt="profile">  <?php
+                     echo  $q_username;
+                     ?>
+               </div>
+              </div>
              <div class="card-body">
                <h5 class="card-title"> <p><?php
                 echo $q_row['q_title'];
@@ -65,7 +74,8 @@ require 'include\header.php';
               <div class="timestamp">
                 <?php echo $q_timestamp;?>
               </div>
-              <a class="answer-link" href="post_answer.php?q_id=<?php echo $q_id; ?>"><i class="fas fa-comment"></i></a>
+
+
 
              <!-- if(!($q_username===$_SESSION['username'])){
                   echo "";
@@ -99,19 +109,22 @@ require 'include\header.php';
                      }
                    }
                  }
-
                ?>
+               <hr>
+               <div class="img-qu">
+                   <a class="answer-link" href="post_answer.php?q_id=<?php echo $q_id; ?>">
+                     <img src="images\icons8-messaging-100.png" alt="reply">
+                   </a>
+               </div>
              </div>
+
              </div>
            <?php
          }
        }
      ?>
 
-      <a href="post_question.php">
-      <button type="button" class="btn-class" id="btn-id">+</button>
-      </a>
-      <!-- </div> -->
+      </div>
       <?php
       //pagination
       // $results_per_page = 10;
@@ -137,9 +150,9 @@ require 'include\header.php';
       $sql = "SELECT * FROM questions LIMIT  $this_page_first_result, $results_per_page";
       $result = mysqli_query($con, $sql);
 
-      while ($row = mysqli_fetch_assoc($result)) {
-        echo  $row['question'] . '<br>';
-      }
+      // while ($row = mysqli_fetch_assoc($result)) {
+      //   echo  $row['q_body'] . '<br>';
+      // }
 
 
         // echo "<a href='home.php?page=$page'>  $page   </a> ";
@@ -158,7 +171,6 @@ require 'include\header.php';
             <li class="page-item"><a class="page-link" href="home.php?page=<?php if($next_page>$number_of_pages){echo $next_page-1;}else{echo $next_page;}?>">Next</a></li>
           </ul>
         </nav>
-
 
 
 
