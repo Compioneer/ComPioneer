@@ -25,3 +25,4 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+$('select').selectpicker();

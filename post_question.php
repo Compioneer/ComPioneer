@@ -7,20 +7,42 @@
       $username = $_SESSION['username'];
 
 ?>
-<!-- CKEDITOR  -->
-<script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<!-- font awesome js link -->
+<!-- <script src="https://use.fontawesome.com/5d66a18552.js"></script> -->
+    <!-- CKEDITOR  -->
+    <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
   <body>
-    <div class="PObackgr">
-    <div class="container">
+    <!-- <div class="homeIllu"> -->
+    <div class="header">
+        <nav>
+        <a href="home.php" class="logo">ComPioneer</a>
+        <div class="img-profile">
+          <a class = "iconNav" href="logout.php">
+            <img src="images\icons8-logout-rounded-down-100.png" alt="logout">
+          </a>
+        </div>
+        </nav>
+    </div>
+
+    <!-- <div class="PObackgr"> -->
+    <div class="container" id="zcontainer">
         <form action="include/insert_question.php" method="POST">
            <div  class="form-group">
              <label for="question_title">
                <input class="form-control" name="question_title" type="text" placeholder="Question Title">
            </div>
            <div class="form-group">
-             <h2>Create Post</h2>
              <label for="exampleFormControlSelect2">Tags</label>
-             <select name="tags[]" multiple class="form-control" id="exampleFormControlSelect2">
+             <br>
+             <select name="tags[]" class="selectpicker" multiple data-live-search="true">
                <?php
                   $sql= "SELECT * FROM tags";
 
@@ -36,22 +58,27 @@
                       echo "<option value='$tag_id'>$tag_title</option>";
                     }
                   }
-
                ?>
-             </select>
+            </select>
            </div>
+           <hr>
+           <div class="img-qu">
+             <img src="images\icons8-ask-question-100.png" alt="chat" <p>Ask a question</p>
+           </div>
+
            <div class="form-group">
-             <label for="exampleFormControlTextarea1">Example textarea</label>
+             <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
              <textarea class="form-control" name="question_body" id="exampleFormControlTextarea1" rows="3"></textarea>
              <script>
                         CKEDITOR.replace( 'question_body' );
                 </script>
            </div>
            <input type="hidden" name="username" value="<?php $username;?>">
-           <button  name="submit" value="submit" class ="btn btn-primary" id="PObtn">send</button>
+           <button name="submit" class="btn btn-class" id="ansbtn" >Post</button>
         </form>
     </div>
-  </div>
+  <!-- </div> -->
+
    <?php }; ?>
   </body>
 </html>
