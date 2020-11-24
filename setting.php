@@ -3,19 +3,21 @@
     require 'include\header.php';
 
 ?>
-    <!-- font awesome js link -->
-    <script src="https://use.fontawesome.com/5d66a18552.js"></script>
-    <div class="header">
-      <nav>
-      <a href="home.php" class="logo">ComPioneer</a>
-      <a class = "iconNav" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
-      </nav>
-    </div>
 
+    <div class="header">
+        <nav>
+        <a href="home.php" class="logo">ComPioneer</a>
+        <div class="img-profile">
+          <a class = "iconNav" href="logout.php">
+            <img src="images\icons8-logout-rounded-down-100.png" alt="logout">
+          </a>
+        </div>
+        </nav>
+      </div>
 
 
     <section id="show_tags">
-        <div class="container">
+        <div class="container" id="zcontainer">
           <section clas="add-tags">
               <div class="contaire">
                   <div class="col-xs-6 col-xs-offset-3">
