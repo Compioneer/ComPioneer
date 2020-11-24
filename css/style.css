@@ -114,6 +114,7 @@ right:5px;
   .header-right {
     float: none;
   }
+
 }
 
 #linkCreateAccount{
@@ -230,10 +231,10 @@ border-radius: 10px;
 
 
 }
-.PObackgr{
+/* .PObackgr{
   background-color: #2c3e50;
 
-}
+} */
 #PObtn{
   float: right;
   border: 0;
@@ -378,3 +379,53 @@ border-top: 3px double #a1c3fc ;
   font-weight: bold;
 
 }
+/* background image */
+.homeIllu{
+background-image: url("../images/download-icons8(6).png");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+max-width: 100%;
+ height: auto;
+}
+
+/* icons style */
+.img-qu img{
+  max-width: 100%;
+   height: auto;
+   height: 30px;
+   width: 30px;
+}
+.img-profile img{
+  max-width: 100%;
+   height: auto;
+   height: 50px;
+   width: 50px;
+}
+.img-pq img{
+  max-width: 100%;
+   height: auto;
+   height: 50px;
+   width: 50px;
+}
+
+/* .img-btn button {
+  display: inline-block;
+    height: 134px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
+}
+.img-btn img{
+  display: block;
+    height: 130px;
+    width: 100px;
+}
+.img-btn{
+  background-image: url('../images/icons8-paper-plane-100.png' );
+  background-size: 100px 130px;
+  height: 134px;
+  width: 104px;
+} */
