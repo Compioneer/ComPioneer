@@ -377,17 +377,16 @@ border-top: 3px double #a1c3fc ;
 }
 .card-title{
   font-weight: bold;
-
 }
 /* background image */
 .homeIllu{
-background-image: url("../images/download-icons8(6).png");
+background-image: url("../images/download-icons8(9).png");
 background-attachment: fixed;
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 max-width: 100%;
- height: auto;
+height: auto;
 }
 
 /* icons style */
