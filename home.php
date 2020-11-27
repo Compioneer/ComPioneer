@@ -16,7 +16,7 @@ require 'include\header.php';
         </nav>
     </div>
 
-<!-- <div class="homeIllu"> -->
+<div class="homeIllu">
 
 
 
@@ -178,11 +178,11 @@ require 'include\header.php';
         <a href="post_question.php">
         <button type="button" class="btn-class" id="btn-id">+</button>
         </a>
-
+</div>
   <div class="footerContent">
 <h4> About us </h4>
 <p> comioneer is __________ </p>
-</di>
+</div>
 
   </body>
 </html>
