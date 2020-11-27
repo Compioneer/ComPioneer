@@ -5,7 +5,7 @@ require 'db.php';
 $name = $_POST['user'];
 $email = $_POST['email'];
 $pass = $_POST['password'];
-$confirmPass = $_POST['confirm-password'];
+$confirmPass = $_POST['conpass'];
 
 if($pass !== $confirmPass){
   header("Location:landing.php?error=passwordcheck&user=".$name."&email=".$email);
