@@ -34,13 +34,17 @@
 
     <!-- <div class="PObackgr"> -->
     <div class="container" id="zcontainer">
+
+      <div class="img-qu">
+        <img src="images\icons8-ask-question-100.png" alt="chat" <p><b> Ask a Question</b> </p>
+      </div>
         <form action="include/insert_question.php" method="POST">
            <div  class="form-group">
              <label for="question_title">
                <input class="form-control" name="question_title" type="text" placeholder="Question Title">
            </div>
            <div class="form-group">
-             <label for="exampleFormControlSelect2">Tags</label>
+             <label for="exampleFormControlSelect2"><b>Tags</b></label>
              <br>
              <select name="tags[]" class="selectpicker" multiple data-live-search="true">
                <?php
@@ -62,9 +66,7 @@
             </select>
            </div>
            <hr>
-           <div class="img-qu">
-             <img src="images\icons8-ask-question-100.png" alt="chat" <p>Ask a question</p>
-           </div>
+
 
            <div class="form-group">
              <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
