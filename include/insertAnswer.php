@@ -20,7 +20,23 @@
             if(!$addAnswer_query){
                 die("Error: ". mysqli_error($con));
             }else{
-                header("Location: ../post_answer.php?q_id=$q_id");
+                if(!isset($_POST['tags'])){
+                    header("Location: ../home.php");
+                }else{
+                    $a_id = mysqli_insert_id($con);
+
+                    for($i=0; $i<count($_POST['tags']); $i++){
+                        $tag_id = $_POST['tags'][$i];
+                        $sql="INSERT INTO a_tags (a_id, tag_id) VALUES ($a_id, $tag_id)";
+                        $insert_tags_query= mysqli_query($con, $sql);
+
+                        if(!$insert_tags_query){
+                            die("Error: ". mysqli_error($con));
+                        }else{
+                              header("Location: ../post_answer.php?q_id=$q_id");
+                        }
+                    }
+                }
             }
 
 
