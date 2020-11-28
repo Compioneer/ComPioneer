@@ -34,7 +34,7 @@
         </nav>
       </div>
 
-    <!-- <div class="homeIllu"> -->
+    <div class="homeIllu">
 
     <?php
         if(!isset($_SESSION['username'])){
@@ -100,7 +100,7 @@
                   ?>
                   <hr>
                   <div class="img-qu">
-                      <a class="answer-link" href="post_answer.php?q_id=<?php echo $q_id; ?>">
+                      <a class="answer-link" href="post_answer.php?q_id=<?php echo $id; ?>">
                         <img src="images\icons8-messaging-100.png" alt="reply">
                       </a>
                   </div>
@@ -113,6 +113,6 @@
         ?>
 
       </div>
-  <!-- </div> -->
+  </div>
   </body>
 </html>
