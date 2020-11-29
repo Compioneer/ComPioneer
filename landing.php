@@ -3,7 +3,7 @@
   require 'include\header.php';
 ?>
 
-
+<title>Landing</title>
 
 <div class="header">
   <a href="home.php" class="logo">

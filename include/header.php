@@ -6,8 +6,8 @@
   <head>
     <meta charset="utf-8">
     <!-- responsive behaviour -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
         <link rel="stylesheet"  href="css/style.css">
           <!--fonts link   -->
@@ -21,12 +21,14 @@
           <!-- tags table styling link  -->
         <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+        <!-- google fonts for footer -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
+      <!-- form validation -->
 
-<!-- form validation -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
 
   </head>
   <body>
