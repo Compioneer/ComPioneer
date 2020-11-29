@@ -28,7 +28,7 @@ function myFunction() {
 $('select').selectpicker();
 
 
-// form validation
+// form validation credit:https://www.javatpoint.com/javascript-form-validation
 
 function isEmail(email){
 return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
@@ -51,10 +51,16 @@ else if(password !== conpass){
   alert("Password mismatch");
   return false;
   }
-  
+
   else if(!isEmail(email)){
     alert("Invalid Email");
     return false;
     }
 
+}
+function alertFunction(){
+alert("your Question was sent!");
+}
+function alertFunction2(){
+alert("your Answer was sent!");
 }
