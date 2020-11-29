@@ -71,7 +71,7 @@
                 </script>
            </div>
            <input type="hidden" name="username" value="<?php $username;?>">
-           <button style="width:100px;" name="submit" class="btn btn-class">Post</button>
+           <button style="width:100px;" name="submit" class="btn btn-class" onclick="alertFunction()">Post</button>
         </form>
     </div>
    <?php }; ?>
@@ -82,5 +82,8 @@
       <b>QU</b> COC students
      <br>  to ask IT/CS related questions in a forum-type format </p>
      </div>
+     
+<script src="js/CTAs.js"></script>
+
   </body>
 </html>
