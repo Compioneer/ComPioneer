@@ -1,14 +1,11 @@
-
 .form-group{
   font-family: 'Poppins', sans-serif ;
 }
 .container{
-
 margin: 1%;
 background-color: #FFFFFF;
 padding:  13rem 3rem 13rem 3rem;
 box-shadow: 0 0 5px 5px rgba(0,0,0, .05);
-
 }
 .signin-text{
   font-family: 'Poppins', sans-serif ;
@@ -34,6 +31,7 @@ border-radius: 0;
 background-color: #fff;
 background-clip: padding-box;
 }
+
 .form-control:focus{
   color: #495057;
   background-color: #fff;
@@ -53,10 +51,9 @@ background-clip: padding-box;
   border-width:medium   !important;
   border-radius: 0;
   background-color: #377094 !important;
-
 }
-.btn-class:hover{
 
+.btn-class:hover{
   background-color: white !important;
   color:  #377094 !important;
 }
@@ -68,7 +65,6 @@ transform: scale(0.80);
 position: relative;
 top: 25px;
 right:5px;
-
 }
 .header {
   overflow: hidden;
@@ -114,7 +110,23 @@ right:5px;
   .header-right {
     float: none;
   }
+}
 
+@media (max-width: 768px)  {
+  #ansbtn{
+    padding:2px 4px;
+    font-size: 80%;
+    line-height: 1;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  #ansbtn{
+  padding:4px 9px;
+  font-size: 90%;
+  line-height: 1.2;
+}
 }
 
 #linkCreateAccount{
@@ -128,7 +140,6 @@ right:5px;
     top: 29px;
     left: 45px;
     cursor: pointer;
-
 }
 
 
@@ -141,9 +152,7 @@ right:5px;
 #signupBtn{
   position: relative;
 left: 118px;
-
 }
-
 
 #btn-id{
 width: 60px;
@@ -159,7 +168,7 @@ z-index: 1;
 outline: none;
 }
 
-.card {
+.card{
 margin: 2% auto;
 float: center;
 padding: .5rem .5rem .5rem .5rem;
@@ -189,69 +198,8 @@ background: #377094;
 border: 1px solid #377094;
 border-radius: 10px;
 }
-
-/*header inside*/
-.headerin {
-  overflow: hidden;
-  padding: 20px 10px;
-  background-color: #377094;
-}
-.headerin a {
-  float: left;
-  color: #f4f3ee;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
-.headerin a.logo {
-    font-family: 'Poppins', sans-serif;
-  font-size: 35px;
-  font-weight: bold;
-}
-.headerin a:hover {
-    text-decoration: none !important;
-  background-color: #377094;
-  color: black;
-}
-.headerin a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-.headerin-right {
-  float: right;
-}
-.home{
-  background-color: #fdfffc;
-}
 .form-group h2 {
    text-align: center;
-
-
-}
-/* .PObackgr{
-  background-color: #2c3e50;
-
-} */
-#PObtn{
-  float: right;
-  border: 0;
-  background: #34495e;
-  color: #fff;
-  padding: 12px 50px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-#PObtn:hover{
-  background: #2980b9 ;
-}
-
-/* tags color */
-.badge-pill {
-  background-color:#fec0b8 !important;
 }
 /* timestamp style  */
 .timestamp{
@@ -262,18 +210,31 @@ border-radius: 10px;
 .card-body a  {
   color:#377094;
 }
+
+/* footer */
 .footerContent{
+  font-family: 'Ubuntu', sans-serif;
   position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #d5d9e8;
-  text-align: left;
-  padding: 29px 10px;
+  background-color: white;
+  text-align: center;
+  padding:  1.5rem 3rem 1.5rem 0rem;
   overflow: hidden;
 }
 .footerContent p{
-  width: 200px;
+  opacity: 0.95;
+  text-align: center;
+  font-size: 17px;
+}
+.footerContent h5{
+  text-align: center;
+}
+/* tags */
+/* tags color */
+.badge-pill {
+  background-color:#fec0b8 !important;
 }
 .form-tags{
   text-align: center;
@@ -290,10 +251,8 @@ border-radius: 10px;
   border-width:medium   !important;
   border-radius: 0;
   background-color: #377094 !important;
-
 }
 .btn-tags:hover{
-
   background-color: #f4f3ee !important;
   color:  #377094 !important;
 }
@@ -303,23 +262,16 @@ transform: scale(0.80);
 #btn-delete{
   color:red;
 }
-/* post answer button */
+
+/* post answer and question button */
 #ansbtn{
-  left:250px;
+  left:400px;
   top: 29px;
   border-style: solid !important;
   border-width:medium   !important;
-width: 600px;
-
+  width: 200px;
 }
 
-#profileimg{
-  position: relative;
-  top: 25px;
-  right:50px !important;
-
-
-}
 /*
 answer page container */
 #zcontainer{
@@ -329,51 +281,9 @@ answer page container */
 }
 
 
-
-
-/* .hrLine{
-margin: 0 auto 15px;
-text-align: center;
-max-width: 600px;
-position: relative;
-color: #103850;
-
-}
-
-.hrLine: before{
-content: '';
-display:block !important;
-width: 70px;
-height: 2px;
-background: #bbb !important;
-position: absolute !important;
-left: 0;
-top: 50%;
-z-index: -2;
-}
-
-.hrLine: after{
-content: ' ';
-display:block;
-width: 70px;
-height: 2px;
-background: #bbb;
-position: absolute;
-right: 0;
-top: 50%;
-z-index: -2;
-}
-
-span{
-background: #fff;
-
-} */
-
-/* hr of answer */
-
+/* hr of answer double line  */
 .lineT{
 border-top: 3px double #a1c3fc ;
-
 }
 .card-title{
   font-weight: bold;
@@ -408,23 +318,3 @@ height: auto;
    height: 50px;
    width: 50px;
 }
-
-/* .img-btn button {
-  display: inline-block;
-    height: 134px;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-    width: 104px;
-}
-.img-btn img{
-  display: block;
-    height: 130px;
-    width: 100px;
-}
-.img-btn{
-  background-image: url('../images/icons8-paper-plane-100.png' );
-  background-size: 100px 130px;
-  height: 134px;
-  width: 104px;
-} */
