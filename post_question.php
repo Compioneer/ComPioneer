@@ -8,11 +8,9 @@
 
 ?>
   <title>Post Question</title>
-<!-- font awesome js link -->
-<!-- <script src="https://use.fontawesome.com/5d66a18552.js"></script> -->
     <!-- CKEDITOR  -->
     <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-<!-- tags selector  -->
+    <!-- tags selector  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -21,7 +19,6 @@
 
 
   <body>
-    <!-- <div class="homeIllu"> -->
     <div class="header">
         <nav>
         <a href="home.php" class="logo">ComPioneer</a>
@@ -32,8 +29,6 @@
         </div>
         </nav>
     </div>
-
-    <!-- <div class="PObackgr"> -->
     <div class="container" id="zcontainer">
 
       <div class="img-qu">
@@ -70,25 +65,22 @@
 
 
            <div class="form-group">
-             <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
              <textarea class="form-control" name="question_body" id="exampleFormControlTextarea1" rows="3"></textarea>
              <script>
                         CKEDITOR.replace( 'question_body' );
                 </script>
            </div>
            <input type="hidden" name="username" value="<?php $username;?>">
-           <button name="submit" class="btn btn-class" id="ansbtn" >Post</button>
+           <button style="width:100px;" name="submit" class="btn btn-class">Post</button>
         </form>
     </div>
-  <!-- </div> -->
-
    <?php }; ?>
-   <div class="footerContent">
-   <h5> <b> About us</b></h5>
-   <p> <b>Comp</b>uter <b>Pioneer</b> is a Q&A platform
-   <br>  a learning environment that allows
-    <b>QU</b> COC students
-   <br>  to ask IT/CS related questions in a forum-type format </p>
-   </div>
+     <div class="footerContent">
+     <h5> <b> About us</b></h5>
+     <p> <b>Comp</b>uter <b>Pioneer</b> is a Q&A platform
+     <br>  a learning environment that allows
+      <b>QU</b> COC students
+     <br>  to ask IT/CS related questions in a forum-type format </p>
+     </div>
   </body>
 </html>

@@ -9,17 +9,17 @@
         $q_id = $_GET['q_id'];
     }
 ?>
-<title>Post Answer</title>
-<!-- font awesome js link -->
-<script src="https://use.fontawesome.com/5d66a18552.js"></script>
-<!-- ckeditor for textbox -->
-<script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-<!-- tags selector  -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+        <title>Post Answer</title>
+        <!-- font awesome js link -->
+        <script src="https://use.fontawesome.com/5d66a18552.js"></script>
+        <!-- ckeditor for textbox -->
+        <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+        <!-- tags selector  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
 
       <div class="header">
@@ -32,12 +32,12 @@
           </div>
           </nav>
       </div>
- <div class="container" id="zcontainer">
 
-    <div class="col align-self-center">
+<div class="container" id="zcontainer">
+  <div class="col align-self-center">
 
 
-  <!-- show the selected question -->
+      <!-- show the selected question -->
       <?php
       session_start();
          $sql="SELECT * FROM questions WHERE q_id = $q_id";
@@ -51,12 +51,6 @@
                     $q_username= $q_row['username'];
                     $q_timestamp=$q_row['timestamp'];
                       ?>
-
-                        <!-- echo   $q_username ."<br>";
-                        echo  $q_title."<br>";
-                        echo $q_body."<br>";
-                        echo $q_timestamp."<br>"; -->
-
                         <div class="container-home">
                         <div class="card bg-light mb-3" id="Acoloring">
                           <div class="card-header">
@@ -73,7 +67,6 @@
                            <div class="timestamp">
                              <?php echo $q_timestamp;?>
                            </div>
-
 
 
                       <?php
@@ -102,14 +95,14 @@
                 }
             ?>
         </div>
-      </div>
-    </div>
+  </div>
+</div>
 
 
 
-    <!-- answers part -->
+              <!-- answers part -->
 
-<hr class="lineT" width="58%">
+          <hr class="lineT" width="58%">
 
 
 
@@ -216,7 +209,7 @@
                        </script>
                 </div>
                 <div class="form-group">
-                    <button name="submit" value="submit" class="btn btn-class" id="ansbtn" >Post</button>
+                    <button style="width:100px;" name="submit" value="submit" class="btn btn-class">Post</button>
                 </div>
             </form>
 

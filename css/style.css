@@ -263,15 +263,6 @@ transform: scale(0.80);
   color:red;
 }
 
-/* post answer and question button */
-#ansbtn{
-  left:400px;
-  top: 29px;
-  border-style: solid !important;
-  border-width:medium   !important;
-  width: 200px;
-}
-
 /*
 answer page container */
 #zcontainer{
