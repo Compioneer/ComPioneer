@@ -37,7 +37,6 @@
                                        <a class="form_link" id="linkCreateAccount">  </br>Don't have an Account? Create Account</a>
                                      </p>
                                    </form>
-<!-- <div id="error"></div> -->
                <form action="signup.php" method="post" id="createAccount" class="form_hidden" name="signform" onsubmit="return validateform()">
 
        <div class="form-group ">
