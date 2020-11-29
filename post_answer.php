@@ -125,7 +125,7 @@
                               <div class="card-header">
                                 <div class="img-qu">
                                    <img src="images\icons8-test-account-100.png" alt="profile">  <?php
-                                    echo  $q_username;
+                                    echo  $a_username;
                                     ?>
                                   </div>
                             </div>
@@ -183,7 +183,7 @@
         ?>
             <form action="include/insertAnswer.php" method="post">
                 <div class="form-group">
-                
+
                  <hr>
                     <textarea name="answer" class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="write your answer here"></textarea>
                     <input type="hidden" name="q_id" value="<?php echo $q_id; ?>">
