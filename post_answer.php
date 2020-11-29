@@ -183,24 +183,7 @@
         ?>
             <form action="include/insertAnswer.php" method="post">
                 <div class="form-group">
-                  <select name="tags[]" class="selectpicker" multiple data-live-search="true">
-                    <?php
-                       $sql= "SELECT * FROM tags";
-
-                       $tags_query = mysqli_query($con, $sql);
-
-                       if(!$tags_query){
-                         die("Error: ". mysqli_error($con));
-                       }else{
-
-                         while($row=mysqli_fetch_assoc($tags_query)){
-                           $tag_id = $row['tag_id'];
-                           $tag_title = $row['tag_title'];
-                           echo "<option value='$tag_id'>$tag_title</option>";
-                         }
-                       }
-                    ?>
-                 </select>
+                
                  <hr>
                     <textarea name="answer" class="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="write your answer here"></textarea>
                     <input type="hidden" name="q_id" value="<?php echo $q_id; ?>">
@@ -209,7 +192,7 @@
                        </script>
                 </div>
                 <div class="form-group">
-                    <button style="width:100px;" name="submit" value="submit" class="btn btn-class">Post</button>
+                    <button style="width:100px;" name="submit" value="submit" class="btn btn-class" onclick="alertFunction2()">Post</button>
                 </div>
             </form>
 
@@ -227,5 +210,6 @@
  <b>QU</b> COC students
 <br>  to ask IT/CS related questions in a forum-type format </p>
 </div>
+<script src="js/CTAs.js"></script>
 </body>
 </html>
