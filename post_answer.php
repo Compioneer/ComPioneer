@@ -9,7 +9,7 @@
         $q_id = $_GET['q_id'];
     }
 ?>
-
+<title>Post Answer</title>
 <!-- font awesome js link -->
 <script src="https://use.fontawesome.com/5d66a18552.js"></script>
 <!-- ckeditor for textbox -->
@@ -225,6 +225,14 @@
 
 
   </div>
+</div>
+</div>
+<div class="footerContent">
+<h5> <b> About us</b></h5>
+<p> <b>Comp</b>uter <b>Pioneer</b> is a Q&A platform
+<br>  a learning environment that allows
+ <b>QU</b> COC students
+<br>  to ask IT/CS related questions in a forum-type format </p>
 </div>
 </body>
 </html>

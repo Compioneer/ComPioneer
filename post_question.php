@@ -7,11 +7,12 @@
       $username = $_SESSION['username'];
 
 ?>
+  <title>Post Question</title>
 <!-- font awesome js link -->
 <!-- <script src="https://use.fontawesome.com/5d66a18552.js"></script> -->
     <!-- CKEDITOR  -->
     <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
-
+<!-- tags selector  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -82,5 +83,12 @@
   <!-- </div> -->
 
    <?php }; ?>
+   <div class="footerContent">
+   <h5> <b> About us</b></h5>
+   <p> <b>Comp</b>uter <b>Pioneer</b> is a Q&A platform
+   <br>  a learning environment that allows
+    <b>QU</b> COC students
+   <br>  to ask IT/CS related questions in a forum-type format </p>
+   </div>
   </body>
 </html>

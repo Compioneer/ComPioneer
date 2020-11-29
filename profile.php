@@ -21,7 +21,7 @@
 }
 ?>
 
-
+<title>Profile</title>
         <!-- users profile -->
     <div class="header">
         <nav>
@@ -113,6 +113,13 @@
         ?>
 
       </div>
+  </div>
+  <div class="footerContent">
+  <h5> <b> About us</b></h5>
+  <p> <b>Comp</b>uter <b>Pioneer</b> is a Q&A platform
+  <br>  a learning environment that allows
+   <b>QU</b> COC students
+  <br>  to ask IT/CS related questions in a forum-type format </p>
   </div>
   </body>
 </html>
