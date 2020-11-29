@@ -25,7 +25,7 @@ if($pass !== $confirmPass){
 
         $reg="INSERT INTO users(username,email,password) VALUES ('$name','$email','$passHash')";
         mysqli_query($con,$reg);
-        header("Location:home.php?signup=success");
+        header("Location:landing.php?signup=success");
         echo "Registrarion successful";
       }
 }
