@@ -1,5 +1,5 @@
 # ComPioneer
-comPioneer is a web-based Q&A platform designed for students to share questions and answers. It is built using HTML, CSS, JavaScript, PHP, and SQL. The platform allows students to create accounts, ask questions, answer questions, upvote or downvote answers, and mark answers as correct.
+comPioneer is a web-based Q&A platform designed for students to share questions and answers. It is built using HTML, CSS, JavaScript, PHP, and SQL. The platform allows students to create accounts, ask questions, answer questions, save and search for answer.
 
 ## Features
 - User registration and login
